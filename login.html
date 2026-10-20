@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Little Olie</title>
+  <meta name="description" content="Little Olie - Masukkan Nama dan Tanggal Lahir Anda">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍽️</text></svg>">
+  <link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       LOGIN & REGISTER VIEW (EXACT MATCH, TITLE: Little Olie)
+       ========================================================================== -->
+  <div id="login-view" class="login-page-wrapper">
+    <div class="card-login">
+      <!-- Brand Title: Little Olie -->
+      <h1 class="login-title" id="auth-title">Little Olie</h1>
+      <p class="login-subtitle" id="auth-subtitle">Masukkan Nama dan Tanggal Lahir Anda</p>
+
+      <form id="login-form">
+        <!-- Nama Lengkap -->
+        <div class="outline-field">
+          <label class="outline-label" for="login-name">Nama Lengkap</label>
+          <div class="outline-box">
+            <svg class="outline-icon" viewBox="0 0 24 24" fill="none" stroke="#2e7d32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+            <input 
+              type="text" 
+              id="login-name" 
+              class="outline-input" 
+              placeholder="Yus Rizal" 
+              value="Yus Rizal" 
+              autocomplete="name"
+              required
+            >
+          </div>
+        </div>
+
+        <!-- Row: Bulan Lahir & Tahun Lahir -->
+        <div class="login-row-2">
+          <!-- Bulan Lahir -->
+          <div class="outline-field">
+            <label class="outline-label" for="login-month">Bulan Lahir</label>
+            <div class="outline-box">
+              <svg class="outline-icon" viewBox="0 0 24 24" fill="none" stroke="#2e7d32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+                <line x1="7" y1="14" x2="7.01" y2="14"></line>
+                <line x1="12" y1="14" x2="12.01" y2="14"></line>
+                <line x1="17" y1="14" x2="17.01" y2="14"></line>
+              </svg>
+              <input 
+                type="text" 
+                id="login-month" 
+                class="outline-input" 
+                placeholder="januari" 
+                value="januari" 
+                required
+              >
+            </div>
+          </div>
+
+          <!-- Tahun Lahir -->
+          <div class="outline-field">
+            <label class="outline-label" for="login-year">Tahun Lahir</label>
+            <div class="outline-box">
+              <svg class="outline-icon" viewBox="0 0 24 24" fill="none" stroke="#2e7d32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8"></path>
+                <path d="M4 16s2-1 4-1 4 1 4 1 2-1 4-1 4 1 4 1"></path>
+                <path d="M2 21h20"></path>
+                <line x1="12" y1="7" x2="12" y2="11"></line>
+                <path d="M12 3a1.5 1.5 0 0 1 1.5 1.5c0 1-1.5 2.5-1.5 2.5s-1.5-1.5-1.5-2.5A1.5 1.5 0 0 1 12 3z"></path>
+              </svg>
+              <input 
+                type="number" 
+                id="login-year" 
+                class="outline-input" 
+                placeholder="2010" 
+                value="2010" 
+                required
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn-signin-green" id="btn-login-submit">
+          Sign In
+        </button>
+
+        <!-- Toggle Auth Prompt -->
+        <div class="auth-switch-footer">
+          <span id="auth-switch-prompt">Belum punya akun?</span>
+          <button type="button" class="btn-text-link" id="btn-toggle-auth">Daftar sekarang</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Bar Alert -->
+  <div class="toast-bar" id="toast-bar"></div>
+
+  <!-- SCRIPT BOOTSTRAP -->
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
